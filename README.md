@@ -1,35 +1,48 @@
-# componente_a
+# Sprint III - Curso de Pós-graduação em Engenharia de Software - MVP
 
-This template should help get you started developing with Vue 3 in Vite.
+## Cenário
 
-## Recommended IDE Setup
+O projeto é uma solução inicial que demonstra a possiblidade de uso da API de Dados Abertos do Senado
+para o trabalho de assessores legislativos da Presidência da República. O componente A é um SPA que realiza
+autenticação de usuário jnto ao componente C e a partir daí se conecta ao Componente B, a API pública do Senado.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Descrição
 
-## Customize configuration
+Este é o componente A do MVP, um frontend responsável por manipular as rotas do componente C e também manipular
+as rotas do componente B (a API pública do Senado).
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Stack
 
-## Project Setup
+A SPA foi feita em Vue.js 3.0, utilizando Vue Router 4.0 e Axios. Controles de estado foram feitos manualmente.
 
-```sh
-npm install
-```
+## Técnicas utilizadas
 
-### Compile and Hot-Reload for Development
+### SPA
 
-```sh
-npm run dev
-```
+Foram utilizadas trechos de código com objetivo de demonstrar conhecimentos em HTML, CSS e JavaScript. Não foram
+utilizados frameworks de estilo.
 
-### Compile and Minify for Production
+### Dados
 
-```sh
-npm run build
-```
+Foi utilizado um sistema de login para que futuramente algumas anotações e valores sejam persistidos no sistema.
 
-### Lint with [ESLint](https://eslint.org/)
+## Docker
 
-```sh
-npm run lint
-```
+Para essa solução não utilizamos o docker-compose para demonstrar o conhecimento de Docker puro
+
+## Como instalar
+
+Na pasta do projeto, digite:
+
+`$ docker build -t senado-consulta-app .`
+`$ docker run -it -p 5327:5327 --rm --name senado-consulta-app senado-consulta-app`
+
+## Rodando o frontend
+
+A página pode ser acessada em 127.0.0.1:5327
+
+## Considerações Finais
+
+Há algumas limitações na aplicação, que tinha por objetivo demonstrar a funcionalidade.
+Só há a possibilidade de acessar dados do dia 10 de julho, proxima sprint coloca a escolha
+por data ou o resumo dos cinco últimos dias.
